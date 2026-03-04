@@ -29,7 +29,6 @@ def signout(email):
     return False, "User not found"
 
 
-# add another fn that allows users to change their password
 def change_password(email, old_password, new_password):
     """Change a user's password."""
     for user in users:
@@ -40,7 +39,6 @@ def change_password(email, old_password, new_password):
     return False, "Invalid email or password"
 
 
-# add another fn that allows users to delete their account
 def delete_account(email, password):
     """Delete a user's account."""
     for user in users:
