@@ -38,3 +38,14 @@ def change_password(email, old_password, new_password):
             return True, "Password changed successfully"
 
     return False, "Invalid email or password"
+
+
+# add another fn that allows users to delete their account
+def delete_account(email, password):
+    """Delete a user's account."""
+    for user in users:
+        if user["email"] == email and user["password"] == password:
+            users.remove(user)
+            return True, "Account deleted successfully"
+
+    return False, "Invalid email or password"
